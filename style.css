@@ -1,0 +1,85 @@
+.Kategorier {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  gap: 10px;
+}
+button {
+  font-size: xx-large;
+  width: 100%;
+  background-color: yellow;
+}
+button:hover {
+  transform: scale(1.2);
+  background-color: red;
+}
+.side-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  max-width: 100%;
+  width: 100%;
+}
+.produktliste-container {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  gap: inherit;
+}
+img {
+  width: 100%;
+}
+h5 {
+  color: gray;
+}
+.tilføj-kurv {
+  background-color: lightgray;
+  padding: 2%;
+}
+h6 {
+  font-size: 50px;
+}
+.logo {
+  width: 200px;
+  margin: auto;
+}
+header {
+  display: flex;
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+header {
+  padding-bottom: 50px;
+}
+.tilfoej-til-kurv {
+  background-color: white;
+  font-size: large;
+}
+@media (min-width: 900px) {
+  .Kategorier {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .produkt-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+  article {
+    border: solid;
+    border-color: gray;
+    padding: 10px;
+  }
+  article:hover {
+    transform: scale(1.05);
+  }
+}
