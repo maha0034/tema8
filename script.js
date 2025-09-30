@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="da">
+console.log("Hej fra product.js");
 
+const id = new URLSearchParams(window.location.search).get("id");
+const productcontainer = document.querySelector(".produktcontainer");
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produkt</title>
-    <link rel="stylesheet" href="layoutprodukt.css">
-</head>
+getData(`https://kea-alt-del.dk/t7/api/products/${id}`);
 
-<body>
-    <header>
-        <section>
-            <div class="logo">
-                <a href="index.html">
-                    <img src="img/logo.png" alt="billede af logo">
-                </a>
-            </div>
-            <div class="menu-ul">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
-        </section>
-    </header>
-    <main>
-        <section class="produktcontainer">
-            <!-- <img src="https://kea-alt-del.dk/t7/images/webp/640/1164.webp" alt="fodboldtrøje">
+function getData(url) {
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => showProduct(data));
+}
+function showProduct(product) {
+  console.log("showProduct: ", product);
+
+  productcontainer.innerHTML += `<article>
+       <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="${product.productdisplayname}" />
+       </article>
             <div class="produkt-information">
                 <h2>Produkt information:</h2>
                 <h4>Model navn:</h4>
@@ -48,10 +37,6 @@
                     <option value="large">Large</option>
                 </select>
                 <button class="tilfoej-til-kurv">Tilføj til kurv</button>
-            </div> -->
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
-
-</html>
+            </div>
+      </article>`;
+}

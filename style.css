@@ -32,10 +32,7 @@ img {
 h5 {
   color: gray;
 }
-.tilføj-kurv {
-  background-color: lightgray;
-  padding: 2%;
-}
+
 h6 {
   font-size: 50px;
 }
@@ -69,7 +66,7 @@ header {
     gap: 10px;
   }
 
-  .produkt-container {
+  .produktcontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
