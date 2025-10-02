@@ -4,11 +4,23 @@
   justify-content: center;
   gap: 10px;
 }
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.buttons button {
+  background-color: lightgrey;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
 button {
   font-size: xx-large;
   width: 100%;
   background-color: yellow;
 }
+
 button:hover {
   transform: scale(1.2);
   background-color: red;
@@ -58,6 +70,7 @@ header {
   background-color: white;
   font-size: large;
 }
+
 @media (min-width: 900px) {
   .Kategorier {
     display: grid;
@@ -78,5 +91,38 @@ header {
   }
   article:hover {
     transform: scale(1.05);
+  }
+  .soldOut .imageContainer p {
+    display: inline-block;
+    color: red;
+    rotate: 10deg;
+    font-size: 4rem;
+    border: 2px solid red;
+    border-radius: 0.5rem;
+    /* opacity: 1; */
+  }
+  .test {
+    display: none;
+  }
+
+  p {
+    position: relative;
+  }
+  .discounted_container {
+    display: none;
+  }
+
+  .discount .discounted_container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .discount .price {
+    text-decoration: line-through;
+  }
+
+  .discounted_container p:nth-child(2) {
+    color: red;
+    background-color: white;
   }
 }

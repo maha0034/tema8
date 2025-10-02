@@ -36,6 +36,7 @@ function showProduct(product) {
                     <option value="medium">Medium</option>
                     <option value="large">Large</option>
                 </select>
+                 Now DKK <span>${product.price - (product.price * product.discount) / 100}</span>,-
                 <button class="tilfoej-til-kurv">Tilføj til kurv</button>
             </div>
       </article>`;
